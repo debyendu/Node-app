@@ -1,0 +1,7 @@
+#npm
+node_modules
+dist
+dockerx.bat
+docker.exe
+dockerd.exe
+.nyc_output

@@ -1,0 +1,42 @@
+{
+  "name": "fundraiser-backend",
+  "version": "1.0.0",
+  "description": "This is the backend project for outreach fundraiser application",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node ./dist/index.bundle.js",
+    "test": "cross-env NODE_ENV=test mocha --timeout 10000 --exit",
+    "test-with-coverage": "cross-env NODE_ENV=test nyc --reporter=text --all mocha --timeout 10000 --exit",
+    "build": "webpack --mode development --open",
+    "dev": "NODE_ENV=development node src/index.js",
+    "debug": "cross-env NODE_ENV=development nodemon --inspect index.js",
+    "load-test": "cross-env NODE_ENV=test node load-test.js"
+  },
+  "author": "Raunak",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "loadtest": "^3.0.6",
+    "mongoose": "^5.4.13",
+    "multer": "^1.4.1",
+    "path": "^0.12.7",
+    "webpack": "^4.29.6",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "webpack-cli": "^3.2.3"
+  }
+}
